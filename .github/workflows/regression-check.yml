@@ -30,6 +30,18 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run tests
+      - name: Run unit tests
         run: |
           python -m pytest
+
+      - name: Train baseline model
+        run: |
+          python -m scripts.train_baseline
+
+      - name: Train candidate model
+        run: |
+          python -m scripts.train_candidate
+
+      - name: Run model regression evaluation
+        run: |
+          python -m scripts.run_evaluation
