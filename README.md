@@ -1,5 +1,3 @@
-Absolutely — copy-paste this **entire README.md** into your GitHub repository.
-
 ````markdown
 # 🤖 Model Regression Detector
 
