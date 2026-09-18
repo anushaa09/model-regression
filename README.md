@@ -1,4 +1,4 @@
-````markdown
+
 # 🤖 Model Regression Detector
 
 An MLOps system that automatically detects performance regressions between a trusted baseline machine learning model and a candidate model version.
