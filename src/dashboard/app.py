@@ -15,10 +15,9 @@ st.title(
 
 
 st.write(
-    "Compare baseline and candidate "
-    "AI model versions."
+    "Compare baseline and candidate ML model versions "
+    "and detect performance regressions."
 )
-
 
 if st.button("Run Evaluation"):
 

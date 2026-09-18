@@ -1,17 +1,11 @@
 import os
+
 from dotenv import load_dotenv
 
 load_dotenv()
 
-OLLAMA_HOST = os.getenv(
-    "OLLAMA_HOST",
-    "http://localhost:11434"
-)
 
-OLLAMA_MODEL = os.getenv(
-    "OLLAMA_MODEL",
-    "llama3.2:3b"
-)
+# Regression detection settings
 
 SIGNIFICANCE_LEVEL = float(
     os.getenv("SIGNIFICANCE_LEVEL", "0.05")
@@ -25,17 +19,25 @@ MIN_F1_DROP = float(
     os.getenv("MIN_F1_DROP", "0.02")
 )
 
-RAG_TOP_K = int(
-    os.getenv("RAG_TOP_K", "5")
-)
+
+# Project paths
 
 BASE_DIR = os.path.dirname(
     os.path.dirname(os.path.abspath(__file__))
 )
 
-MODEL_DIR = os.path.join(BASE_DIR, "models")
+MODEL_DIR = os.path.join(
+    BASE_DIR,
+    "models"
+)
 
-DATA_DIR = os.path.join(BASE_DIR, "data")
+DATA_DIR = os.path.join(
+    BASE_DIR,
+    "data"
+)
+
+
+# Model paths
 
 BASELINE_MODEL_PATH = os.path.join(
     MODEL_DIR,
@@ -47,11 +49,17 @@ CANDIDATE_MODEL_PATH = os.path.join(
     "candidate_model.pkl"
 )
 
+
+# Golden test set
+
 TEST_DATA_PATH = os.path.join(
     DATA_DIR,
     "golden_sets",
     "adult_income_test.csv"
 )
+
+
+# Evaluation history database
 
 DB_PATH = os.path.join(
     DATA_DIR,
